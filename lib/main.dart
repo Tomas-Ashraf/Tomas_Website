@@ -1,10 +1,14 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, unused_import
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:tomas_website/widgets/header_section.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const PortfolioApp());
 }
 

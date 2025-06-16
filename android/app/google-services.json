@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069676299148",
+    "project_id": "tomas-s-website-bcfae",
+    "storage_bucket": "tomas-s-website-bcfae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069676299148:android:1a760463b8948ae5030ca9",
+        "android_client_info": {
+          "package_name": "com.example.tomas_website"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB54eBBdjWBHJitEmHdF0YxOE0Y3g3WEsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
