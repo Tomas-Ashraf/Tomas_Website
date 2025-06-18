@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tomas_website/services/get_resume_service.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:tomas_website/widgets/cv_button_widget.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String? resumeUrl;
     final isMobile = MediaQuery.of(context).size.width < 600;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,21 +31,8 @@ class HeaderSection extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
         const SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: () async {
-            await cvButton(resumeUrl);
-          },
-          child: const Text("Download CV"),
-        ),
+        CvButtonWidget(),
       ],
     );
-  }
-
-  Future<void> cvButton(String? resumeUrl) async {
-     print('Tapped');
-    resumeUrl = await GetResumeLink().getResumeUrl();
-    print('Resume Url: $resumeUrl');
-    Uri uri = Uri.parse('$resumeUrl');
-    await launchUrl(uri, webOnlyWindowName: '_blank');
   }
 }
