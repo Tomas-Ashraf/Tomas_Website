@@ -1,10 +1,11 @@
 class ProjectModel {
-  final String projectName;
-  final String projectSubtitle;
-  final String? projectDescription;
-  final List<String> techStack;
-  final String projectImage;
-  final String? projectVideos;
+  String projectName;
+  String projectSubtitle;
+  String? projectDescription;
+  List<dynamic> techStack;
+  String projectImage;
+  String? projectVideos;
+  int? projectOrder;
 
   ProjectModel({
     required this.projectName,
@@ -13,5 +14,6 @@ class ProjectModel {
     required this.techStack,
     required this.projectImage,
     this.projectVideos,
+    this.projectOrder,
   });
 }
