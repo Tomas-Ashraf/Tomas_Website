@@ -37,6 +37,7 @@ class ProjectsSection extends StatelessWidget {
                 children: List.generate(projectList.length, (index) {
                   return ProjectCardWidget(
                     projectModel: ProjectModel(
+                      projectList[index].projectDescription,
                       projectName: projectList[index].projectName,
                       projectSubtitle: projectList[index].projectSubtitle,
                       techStack: projectList[index].techStack,

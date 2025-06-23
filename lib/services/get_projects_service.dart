@@ -16,12 +16,14 @@ class GetProjectsService {
             for (var doc in querySnapshot.docs) {
               projectsList.add(
                 ProjectModel(
+                  doc['project_description'].toString(),
+                  id: doc['project_description'].toString(),
                   projectName: doc['project_name'].toString(),
                   projectSubtitle: doc['project_subtitle'].toString(),
                   techStack: List<String>.from(doc['project_techstack']),
                   projectImage: doc['project_image'].toString(),
                   projectOrder: doc['project_order'],
-                  projectDescription: doc['project_description'].toString(),
+
                   projectVideos: doc['project_videos'].toString(),
                 ),
               );

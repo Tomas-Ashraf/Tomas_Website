@@ -15,9 +15,11 @@ class HeaderSection extends StatelessWidget {
         Text(
           ' Tomas Ashraf',
           style: TextStyle(
-            fontSize: isMobile ? 28 : 36,
+            fontSize: isMobile ? 40 : 60,
+            // isMobile ? 28 : 36,
             fontWeight: FontWeight.w900,
             color: Color(0xffa35bf7),
+            fontFamily: 'Sprintura_Demo',
           ),
         ),
         const SizedBox(height: 8),
